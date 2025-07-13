@@ -69,6 +69,15 @@ body {
   color: #f0f0f0;
 }
 
+/* Исправление цвета текста в активном мобильном меню при прокрутке */
+.header.scrolled .nav-menu.active li a {
+  color: #333333;
+}
+
+.header.scrolled .nav-menu.active li a:hover {
+  color: #00bcd4;
+}
+
 /* Гамбургер при прокрутке */
 .header.scrolled .hamburger-btn span {
   background-color: #ffffff;
@@ -87,6 +96,20 @@ body {
   transform: none;
   padding: 8px 20px;
   border-radius: 25px;
+}
+
+/* Исправление для кнопки registrace в активном мобильном меню при прокрутке */
+.header.scrolled .nav-menu.active li a[href="#registrace-znacky"] {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+
+.header.scrolled .nav-menu.active li a[href="#registrace-znacky"]:hover {
+  background: linear-gradient(135deg, #0097a7, #00838f);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .logo {
