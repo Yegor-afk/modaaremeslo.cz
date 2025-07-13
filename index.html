@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- ======= Hlavicka ======= -->
+<!-- ======= Header ======= -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
@@ -20,10 +20,10 @@
   <!-- Swiper CSS -->
   <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
   
-  <!-- Основные стили -->
+  <!-- Main styles -->
   <link href="assets/css/style.css" rel="stylesheet">
   
-  <!-- ======= Konec Hlavicky ======= -->
+  <!-- ======= End Header ======= -->
  <title>Modaaremeslo.cz</title>
   <meta content="Modaaremeslo.cz - česká móda a řemesla" name="description">
   <meta content="design, lokální tvůrci, udržitelná móda, osobitost, šperky, kosmetika, gastronomie, festival" name="keywords">
@@ -42,7 +42,7 @@
         </div>
         <div class="col-auto">
           <nav class="navbar">
-            <!-- Гамбургер меню для мобильных -->
+            <!-- Hamburger menu for mobile -->
             <div class="hamburger-menu">
               <button class="hamburger-btn" type="button" onclick="toggleMenu()">
                 <span></span>
@@ -51,7 +51,7 @@
               </button>
             </div>
             
-            <!-- Навигационное меню -->
+            <!-- Navigation menu -->
             <ul class="nav-menu" id="nav-menu">
               <li><a href="#o-akci">o akci</a></li>
               <li><a href="#design-market">design market</a></li>
@@ -65,8 +65,32 @@
   </header>
   <!-- ======= End Header ======= -->
 
-  <!-- Затемнение фона для мобильного меню -->
+  <!-- Background overlay for mobile menu -->
   <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
+
+  <!-- Modal window for brand registration -->
+  <div class="registration-overlay" id="registration-overlay" onclick="closeRegistrationModal()"></div>
+  <div class="registration-modal" id="registration-modal">
+    <div class="registration-content">
+      <button class="close-btn" onclick="closeRegistrationModal()">&times;</button>
+      <h2>Registrace značky</h2>
+      <form class="registration-form" id="registration-form">
+        <div class="form-group">
+          <label for="brand-name">Název značky</label>
+          <input type="text" id="brand-name" name="brand-name" required>
+        </div>
+        <div class="form-group">
+          <label for="brand-description">Popis</label>
+          <textarea id="brand-description" name="brand-description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="brand-email">E-mail pro kontakt</label>
+          <input type="email" id="brand-email" name="brand-email" required>
+        </div>
+        <button type="submit" class="submit-btn">Odeslat</button>
+      </form>
+    </div>
+  </div>
 
   <!-- ======= Hero Image ======= -->
   <section class="hero-section">
@@ -394,19 +418,64 @@
       menuOverlay.classList.remove('active');
     }
     
-    // Закрыть меню при клике на ссылку
+    // Close menu on link click
     document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', closeMenu);
+      if (link.getAttribute('href') === '#registrace-znacky') {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          closeMenu();
+          openRegistrationModal();
+        });
+      } else {
+        link.addEventListener('click', closeMenu);
+      }
+    });
+
+    // Functions for registration modal
+    function openRegistrationModal() {
+      const registrationOverlay = document.getElementById('registration-overlay');
+      const registrationModal = document.getElementById('registration-modal');
+      
+      registrationOverlay.classList.add('active');
+      registrationModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Block page scrolling
+    }
+
+    function closeRegistrationModal() {
+      const registrationOverlay = document.getElementById('registration-overlay');
+      const registrationModal = document.getElementById('registration-modal');
+      
+      registrationOverlay.classList.remove('active');
+      registrationModal.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Unblock page scrolling
+    }
+
+    // Registration form handling
+    document.getElementById('registration-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const brandName = document.getElementById('brand-name').value;
+      const brandDescription = document.getElementById('brand-description').value;
+      const brandEmail = document.getElementById('brand-email').value;
+      
+      // Here you can add sending data to server
+      alert('Děkujeme za registraci! Brzy se vám ozveme na e-mail: ' + brandEmail);
+      
+      // Clear form and close modal
+      this.reset();
+      closeRegistrationModal();
     });
     
-    // Закрыть меню при нажатии ESC
+    // Close menu on ESC key press
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeMenu();
+        closeRegistrationModal();
       }
     });
     
-    // Изменение header при прокрутке
+    // Change header on scroll
     window.addEventListener('scroll', () => {
       const header = document.getElementById('header');
       const heroSection = document.querySelector('.hero-section');
@@ -415,7 +484,7 @@
         const heroHeight = heroSection.offsetHeight;
         const scrollPosition = window.scrollY;
         
-        // Если прокрутили больше чем половина hero секции
+        // If scrolled more than half of hero section
         if (scrollPosition > heroHeight * 0.5) {
           header.classList.add('scrolled');
         } else {

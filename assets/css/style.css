@@ -1,4 +1,4 @@
-/* ======= Основные стили ======= */
+/* ======= Base Styles ======= */
 * {
   margin: 0;
   padding: 0;
@@ -48,19 +48,19 @@ body {
   align-items: center;
 }
 
-/* Header при прокрутке */
+/* Header on scroll */
 .header.scrolled {
   background-color: #87CEEB;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Логотип при прокрутке */
+/* Logo on scroll */
 .header.scrolled .logo img {
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
 }
 
-/* Навигационное меню при прокрутке */
+/* Navigation menu on scroll */
 .header.scrolled .nav-menu li a {
   color: #ffffff;
 }
@@ -69,7 +69,7 @@ body {
   color: #f0f0f0;
 }
 
-/* Исправление цвета текста в активном мобильном меню при прокрутке */
+/* Fix text color in active mobile menu on scroll */
 .header.scrolled .nav-menu.active li a {
   color: #333333;
 }
@@ -78,12 +78,12 @@ body {
   color: #00bcd4;
 }
 
-/* Гамбургер при прокрутке */
+/* Hamburger on scroll */
 .header.scrolled .hamburger-btn span {
   background-color: #ffffff;
 }
 
-/* Скрыть овал при прокрутке */
+/* Hide oval on scroll */
 .header.scrolled .nav-menu li a[href="#registrace-znacky"] {
   background-color: transparent;
   color: #ffffff;
@@ -98,7 +98,7 @@ body {
   border-radius: 25px;
 }
 
-/* Исправление для кнопки registrace в активном мобильном меню при прокрутке */
+/* Fix for registrace button in active mobile menu on scroll */
 .header.scrolled .nav-menu.active li a[href="#registrace-znacky"] {
   background: linear-gradient(135deg, #00bcd4, #0097a7);
   color: #ffffff;
@@ -138,7 +138,7 @@ body {
   opacity: 0.8;
 }
 
-/* ======= Навигация ======= */
+/* ======= Navigation ======= */
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -169,7 +169,7 @@ body {
   color: #666;
 }
 
-/* Стиль для "registrace značky" - голубой овал */
+/* Style for "registrace značky" - blue oval */
 .nav-menu li a[href="#registrace-znacky"] {
   background-color: #87CEEB;
   color: #ffffff;
@@ -184,7 +184,7 @@ body {
   transform: scale(1.05);
 }
 
-/* ======= Гамбургер меню ======= */
+/* ======= Hamburger Menu ======= */
 .hamburger-menu {
   display: none;
   justify-content: center;
@@ -225,7 +225,7 @@ body {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Затемнение фона при открытом меню */
+/* Background overlay when menu is open */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -244,7 +244,7 @@ body {
   visibility: visible;
 }
 
-/* Отступ для контента чтобы не перекрывался header */
+/* Offset for content so it doesn't overlap header */
 body {
   padding-top: 90px;
 }
@@ -269,7 +269,7 @@ body {
   object-fit: cover;
 }
 
-/* ======= Заголовки ======= */
+/* ======= Headings ======= */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   margin-bottom: 20px;
@@ -281,12 +281,12 @@ h1 {
   margin: 40px 0;
 }
 
-/* ======= Базовая типографика ======= */
+/* ======= Base Typography ======= */
 p {
   margin-bottom: 15px;
 }
 
-/* ======= Текст описания ======= */
+/* ======= Description Text ======= */
 .description-text {
   text-align: center;
   max-width: 900px;
@@ -357,7 +357,7 @@ p {
   filter: brightness(0.4);
 }
 
-/* Overlay для текста */
+/* Overlay for text */
 .gallery-overlay {
   position: absolute;
   top: 0;
@@ -392,7 +392,7 @@ p {
   font-weight: 300;
 }
 
-/* Голубая плашка с источником */
+/* Blue badge with source */
 .source-link {
   position: absolute;
   bottom: 0;
@@ -426,9 +426,9 @@ p {
   color: white;
 }
 
-/* ======= Адаптивность для фотогалереи ======= */
+/* ======= Responsiveness for Photo Gallery ======= */
 
-/* Планшеты и средние экраны (до 768px) */
+/* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -459,7 +459,7 @@ p {
   }
 }
 
-/* Мобильные устройства (до 576px) */
+/* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .gallery-grid {
     grid-template-columns: 1fr;
@@ -535,13 +535,13 @@ p {
     text-align: center;
   }
   
-  /* Адаптация голубого овала для мобильного меню */
+  /* Adaptation of blue oval for mobile menu */
   .nav-menu li a[href="#registrace-znacky"] {
     padding: 10px 25px;
     margin: 5px 0;
   }
   
-  /* Скрыть овал в мобильном меню при прокрутке */
+  /* Hide oval in mobile menu on scroll */
   .header.scrolled .nav-menu li a[href="#registrace-znacky"] {
     padding: 10px 0;
     margin: 5px 0;
@@ -603,13 +603,13 @@ p {
     font-size: 18px;
   }
   
-  /* Адаптация голубого овала для планшетов */
+  /* Adaptation of blue oval for tablets */
   .nav-menu li a[href="#registrace-znacky"] {
     padding: 8px 20px;
     margin: 3px 0;
   }
   
-  /* Скрыть овал на планшетах при прокрутке */
+  /* Hide oval on tablets on scroll */
   .header.scrolled .nav-menu li a[href="#registrace-znacky"] {
     padding: 10px 0;
     margin: 3px 0;
@@ -659,14 +659,14 @@ p {
     font-size: 16px;
   }
   
-  /* Адаптация голубого овала для мобильных */
+  /* Adaptation of blue oval for mobile */
   .nav-menu li a[href="#registrace-znacky"] {
     padding: 6px 18px;
     margin: 2px 0;
     font-size: 16px;
   }
   
-  /* Скрыть овал на мобильных при прокрутке */
+  /* Hide oval on mobile on scroll */
   .header.scrolled .nav-menu li a[href="#registrace-znacky"] {
     padding: 10px 0;
     margin: 2px 0;
@@ -751,9 +751,9 @@ p {
   border-radius: 8px;
 }
 
-/* ======= Адаптивность для Módní Přehlídka ======= */
+/* ======= Responsiveness for Módní Přehlídka ======= */
 
-/* Планшеты и средние экраны (до 768px) */
+/* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .modni-content {
     flex-direction: column;
@@ -792,7 +792,7 @@ p {
   }
 }
 
-/* Мобильные устройства (до 576px) */
+/* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .modni-prehlidka-section {
     margin-top: 50px;
@@ -874,7 +874,7 @@ p {
   filter: brightness(0.4);
 }
 
-/* Overlay для текста в módní галерее */
+/* Overlay for text in fashion gallery */
 .modni-photo-gallery .gallery-overlay {
   position: absolute;
   top: 0;
@@ -909,7 +909,7 @@ p {
   font-weight: 300;
 }
 
-/* Голубая плашка с источником для módní галереи */
+/* Blue badge with source for fashion gallery */
 .modni-photo-gallery .source-link {
   position: absolute;
   bottom: 0;
@@ -943,9 +943,9 @@ p {
   color: white;
 }
 
-/* ======= Адаптивность для Módní Photo Gallery ======= */
+/* ======= Responsiveness for Módní Photo Gallery ======= */
 
-/* Планшеты и средние экраны (до 768px) */
+/* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .modni-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -976,7 +976,7 @@ p {
   }
 }
 
-/* Мобильные устройства (до 576px) */
+/* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .modni-gallery-grid {
     grid-template-columns: 1fr;
@@ -1081,9 +1081,9 @@ p {
   filter: grayscale(0%);
 }
 
-/* ======= Адаптивность для Hlavní Partneři ======= */
+/* ======= Responsiveness for Hlavní Partneři ======= */
 
-/* Планшеты и средние экраны (до 768px) */
+/* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .partneri-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1111,7 +1111,7 @@ p {
   }
 }
 
-/* Мобильные устройства (до 576px) */
+/* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .partneri-grid {
     grid-template-columns: 1fr;
@@ -1223,9 +1223,9 @@ p {
   font-weight: 500;
 }
 
-/* ======= Адаптивность для Map Section ======= */
+/* ======= Responsiveness for Map Section ======= */
 
-/* Планшеты и средние экраны (до 768px) */
+/* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .map-section {
     margin-top: 60px;
@@ -1271,7 +1271,7 @@ p {
   }
 }
 
-/* Мобильные устройства (до 576px) */
+/* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .map-section {
     margin-top: 50px;
@@ -1343,7 +1343,7 @@ p {
   width: 100%;
   height: auto;
   max-width: 200px;
-  filter: brightness(0) invert(1); /* Делаем логотип белым */
+  filter: brightness(0) invert(1); /* Make logo white */
 }
 
 .footer-columns {
@@ -1419,7 +1419,7 @@ p {
   color: #00bcd4;
 }
 
-/* Адаптивность для футера */
+/* Responsiveness for Footer */
 @media (max-width: 992px) {
   .footer-content {
     flex-direction: column;
@@ -1490,5 +1490,253 @@ p {
   
   .footer-columns {
     gap: 20px;
+  }
+}
+
+/* ======= Registration Modal ======= */
+.registration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.registration-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.registration-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  z-index: 1501;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.registration-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.registration-content {
+  padding: 40px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.registration-content h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
+.registration-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #0097a7, #00838f);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ======= Responsiveness for Registration Modal ======= */
+
+/* Tablets and medium screens (up to 768px) */
+@media (max-width: 768px) {
+  .registration-modal {
+    width: 450px;
+  }
+  
+  .registration-content {
+    padding: 30px 25px;
+  }
+  
+  .registration-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices (up to 576px) */
+@media (max-width: 576px) {
+  .registration-modal {
+    width: 350px;
+    border-radius: 12px;
+  }
+  
+  .registration-content {
+    padding: 25px 20px;
+  }
+  
+  .close-btn {
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .registration-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 9px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+  }
+  
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small screens (up to 400px) */
+@media (max-width: 400px) {
+  .registration-modal {
+    width: 320px;
+  }
+  
+  .registration-content {
+    padding: 20px 15px;
+  }
+  
+  .registration-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 0.85rem;
   }
 }
