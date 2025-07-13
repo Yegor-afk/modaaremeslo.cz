@@ -832,3 +832,181 @@ p {
     border-radius: 10px;
   }
 }
+
+/* ======= Módní Photo Gallery ======= */
+.modni-photo-gallery {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.modni-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modni-photo-gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.modni-photo-gallery .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modni-photo-gallery .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.modni-photo-gallery .gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+  filter: brightness(0.4);
+}
+
+/* Overlay для текста в módní галерее */
+.modni-photo-gallery .gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  z-index: 2;
+}
+
+.modni-photo-gallery .gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.modni-photo-gallery .overlay-content {
+  text-align: center;
+  color: white;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.modni-photo-gallery .overlay-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Голубая плашка с источником для módní галереи */
+.modni-photo-gallery .source-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  padding: 8px 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.modni-photo-gallery .gallery-item:hover .source-link {
+  transform: translateY(0);
+}
+
+.modni-photo-gallery .source-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.modni-photo-gallery .source-link a:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+/* ======= Адаптивность для Módní Photo Gallery ======= */
+
+/* Планшеты и средние экраны (до 768px) */
+@media (max-width: 768px) {
+  .modni-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .modni-photo-gallery {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .modni-photo-gallery .gallery-overlay {
+    padding: 15px;
+  }
+  
+  .modni-photo-gallery .overlay-text {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  
+  .modni-photo-gallery .source-link {
+    padding: 6px 12px;
+  }
+  
+  .modni-photo-gallery .source-link a {
+    font-size: 11px;
+  }
+}
+
+/* Мобильные устройства (до 576px) */
+@media (max-width: 576px) {
+  .modni-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 5px;
+  }
+  
+  .modni-photo-gallery {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .modni-photo-gallery .gallery-item {
+    border-radius: 8px;
+  }
+  
+  .modni-photo-gallery .gallery-overlay {
+    padding: 12px;
+  }
+  
+  .modni-photo-gallery .overlay-text {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  
+  .modni-photo-gallery .source-link {
+    padding: 5px 10px;
+  }
+  
+  .modni-photo-gallery .source-link a {
+    font-size: 10px;
+  }
+}
