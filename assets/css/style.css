@@ -1317,3 +1317,178 @@ p {
     margin-bottom: 8px;
   }
 }
+
+/* ======= Footer ======= */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0 40px 0;
+  margin-top: 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  max-width: 250px;
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  filter: brightness(0) invert(1); /* Делаем логотип белым */
+}
+
+.footer-columns {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 700px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.footer-divider {
+  width: 40px;
+  height: 3px;
+  background-color: #00bcd4;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer-info {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+  color: #cccccc;
+}
+
+.footer-info a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #00bcd4;
+}
+
+/* Адаптивность для футера */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-logo {
+    max-width: 180px;
+  }
+  
+  .footer-columns {
+    width: 100%;
+    max-width: none;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 30px 0;
+  }
+  
+  .footer-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .footer-column {
+    min-width: auto;
+  }
+  
+  .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-divider {
+    width: 30px;
+    height: 2px;
+    margin: 0 auto 15px auto;
+  }
+  
+  .footer-links a,
+  .footer-info {
+    font-size: 0.9rem;
+  }
+  
+  .footer-info p {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 0 25px 0;
+  }
+  
+  .footer-content {
+    gap: 20px;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+  }
+  
+  .footer-columns {
+    gap: 20px;
+  }
+}
