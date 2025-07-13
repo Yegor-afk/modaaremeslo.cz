@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ======= Hlavicka ======= -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+ 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- GLightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+  
+  <!-- Основные стили -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- ======= Konec Hlavicky ======= -->
+ <title>Modaaremeslo.cz</title>
+  <meta content="Modaaremeslo.cz - česká móda a řemesla" name="description">
+  <meta content="design, lokální tvůrci, udržitelná móda, osobitost, šperky, kosmetika, gastronomie, festival" name="keywords">
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/Logo/Logo.png" alt="Modaaremeslo.cz" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-auto">
+          <nav class="navbar">
+            <!-- Гамбургер меню для мобильных -->
+            <div class="hamburger-menu">
+              <button class="hamburger-btn" type="button" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            
+            <!-- Навигационное меню -->
+            <ul class="nav-menu" id="nav-menu">
+              <li><a href="#o-akci">o akci</a></li>
+              <li><a href="#design-market">design market</a></li>
+              <li><a href="#modni-prehlidka">módní přehlídka</a></li>
+              <li><a href="#registrace-znacky">registrace značky</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ======= End Header ======= -->
+
+  <!-- Затемнение фона для мобильного меню -->
+  <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
+
+  <!-- ======= Hero Image ======= -->
+  <section class="hero-section">
+    <div class="hero-image">
+      <img src="assets/Logo/rotator.php.webp" alt="Modaaremeslo.cz Hero" class="img-fluid w-100">
+    </div>
+  </section>
+  <!-- ======= End Hero Image ======= -->
+
+  <div class="container" id="o-akci">
+    <h1>ČTVRTÝ ROČNÍK PÍSECKÉHO VÍKENDU MÓDY A DESIGNU BUDE OSLAVOU ČESKÉ UDRŽITELNÉ TVORBY</h1>
+    
+    <div class="description-text">
+      <p>Písecký víkend módy a designu nabídne 2. a 3. května 2025 místním i návštěvníkům z celé republiky jedinečnou módní přehlídku udržitelných módních značek a designérů a výběrový design market.</p>
+      
+      <p>Páteční večerní módní přehlídka v Písku aspiruje na neopakovatelný zážitek, který si nesmí nechat ujít nikdo, koho alespoň trochu zajímá, co se děje ve světě české módy. Svou tvorbu zde představí rodinná značka Machač, mušelínová značka BigBros., Jamie Collection tvořící s důrazem na pohodlí, Grazia s plejádou prémiových přírodních materiálů, nadčasová Evelin Chic nebo talentem sršící Princ z Moravy. Tváří letošního ročníku se stala písecká rodačka herečka Ivana Jirešová. Na mole se v netradičních rolích dále představí herečky Michaela Tomešová, Darija Pavlovičová a Natálie Halouzková, influencerka Žaneta Skružná, top modelka Martina Šmuková a další významná jména z oblasti fashion. Večerem provede Kateřina Pechová.</p>
+      
+      <p>Na sobotním trhu budou k vidění a zakoupení oděvy, módní doplňky, přírodní kosmetika, svíčky, mýdla, dekorace, hračky a mnohé další. Gastro zóna nabídne dobroty z lokálních surovin a návštěvníci si pochutnají na skvělé kávě a dalších dobrotách. Kdo si přinese deku, může si udělat jedinečný piknik přímo v srdci design marketu. K tomu malé módní přehlídky, workshopy a zábavné aktivity pro děti. PVMD si užije celá rodina.</p>
+      
+      <p>Písecký víkend módy a designu je oslavou české módy, udržitelné výroby a poctivého řemesla. Funguje na principech vzájemné podpory a spolupráce v rámci české designové scény. Koná se v produkci Agentury Verona, ve spolupráci s CKMP a je podporován městem Písek.</p>
+    </div>
+    
+    <p class="text-center">Česká móda a řemesla</p>
+    
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Design</h5>
+            <p class="card-text">Lokální tvůrci a udržitelná móda</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Šperky</h5>
+            <p class="card-text">Osobité šperky od českých designérů</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Kosmetika</h5>
+            <p class="card-text">Přírodní kosmetika a gastronomie</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ======= Design Market Section ======= -->
+    <div class="design-market-section">
+      <h1 id="design-market">DESIGN MARKET</h1>
+    </div>
+    
+    <!-- ======= Photo Gallery ======= -->
+    <div class="photo-gallery">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile-1.webp" alt="Design Market Photo 1" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile-2.webp" alt="Design Market Photo 2" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile-3.webp" alt="Design Market Photo 3" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile-4.webp" alt="Design Market Photo 4" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile-5.webp" alt="Design Market Photo 5" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/designphoto/profile.webp" alt="Design Market Photo 6" class="gallery-image">
+          <div class="gallery-overlay">
+            <div class="overlay-content">
+              <p class="overlay-text">Toto je příklad popisu témat Design Marketu. Dále pouze uvedu text jako ukázku. Chronica Boemorum (Kronika Čechů) je první latinská kronika, ve které je dějiny českých zemí popsány soustavně a poměrně podrobně. Byla sepsána v letech 1119–1125 Kosmou Pražským.</p>
+            </div>
+          </div>
+          <div class="source-link">
+            <a href="https://en.wikipedia.org/wiki/Chronica_Boemorum" target="_blank" rel="noopener noreferrer">Zdroj</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= End Photo Gallery ======= -->
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Гамбургер меню JS -->
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      const hamburgerBtn = document.querySelector('.hamburger-btn');
+      const menuOverlay = document.getElementById('menu-overlay');
+      
+      navMenu.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    }
+    
+    function closeMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      const hamburgerBtn = document.querySelector('.hamburger-btn');
+      const menuOverlay = document.getElementById('menu-overlay');
+      
+      navMenu.classList.remove('active');
+      hamburgerBtn.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    }
+    
+    // Закрыть меню при клике на ссылку
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Закрыть меню при нажатии ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+    
+    // Изменение header при прокрутке
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      const heroSection = document.querySelector('.hero-section');
+      
+      if (heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        const scrollPosition = window.scrollY;
+        
+        // Если прокрутили больше чем половина hero секции
+        if (scrollPosition > heroHeight * 0.5) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
