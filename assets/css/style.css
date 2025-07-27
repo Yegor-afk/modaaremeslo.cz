@@ -17,6 +17,11 @@ body {
   line-height: 1.6;
 }
 
+/* Offset for content so it doesn't overlap header */
+body {
+  padding-top: 90px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -34,14 +39,6 @@ body {
   height: 90px;
   min-height: 90px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-section .hero-image img {
-  width: 100%;
-  height: 400px; /* Увеличиваем высоту */
-  max-width: 100%;
-  object-fit: contain; /* Показывает полное изображение без обрезки */
-  object-position: center; /* Центрирует изображение */
 }
 
 .header .container-fluid {
@@ -252,11 +249,6 @@ body {
   visibility: visible;
 }
 
-/* Offset for content so it doesn't overlap header */
-body {
-  padding-top: 90px;
-}
-
 /* ======= Hero Section ======= */
 .hero-section {
   width: 100%;
@@ -267,41 +259,31 @@ body {
 
 .hero-image {
   width: 100%;
-  height: 400px; /* Увеличиваем высоту контейнера */
+  height: 450px; /* Increased from 350px to 450px */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff; /* Белый фон для пустых областей */
+  background-color: #ffffff;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* Show full image without cropping */
+  object-position: center;
 }
 
 /* Hero Image Responsive Sizes */
 @media (max-width: 768px) {
-  .hero-section .hero-image img {
-    height: 250px; /* Увеличиваем для планшетов */
-  }
-  
   .hero-image {
-    height: 250px;
-    background-color: #ffffff; /* Белый фон */
+    height: 350px; /* Increased from 280px to 350px */
   }
 }
 
 @media (max-width: 576px) {
-  .hero-section .hero-image img {
-    height: 200px; /* Увеличиваем для мобильных */
-  }
-  
   .hero-image {
-    height: 200px;
-    background-color: #ffffff; /* Белый фон */
+    height: 280px; /* Increased from 220px to 280px */
   }
 }
 
@@ -625,11 +607,6 @@ p {
     padding-top: 90px;
   }
   
-  .hero-section {
-    margin-top: -90px;
-    padding-top: 90px;
-  }
-  
   .nav-menu {
     width: 350px;
     padding: 35px 20px;
@@ -679,11 +656,6 @@ p {
   
   .design-market-section h1 {
     font-size: 1.8rem;
-  }
-  
-  .hero-section {
-    margin-top: -90px;
-    padding-top: 90px;
   }
   
   .nav-menu {
