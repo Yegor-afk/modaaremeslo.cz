@@ -1042,10 +1042,11 @@ p {
 }
 
 .partneri-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .partneri-item {
@@ -1058,6 +1059,8 @@ p {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 120px;
+  flex: 0 1 300px;
+  max-width: 350px;
 }
 
 .partneri-item:hover {
@@ -1094,8 +1097,12 @@ p {
 /* Tablets and medium screens (up to 768px) */
 @media (max-width: 768px) {
   .partneri-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  
+  .partneri-item {
+    flex: 0 1 250px;
+    max-width: 280px;
   }
   
   .partneri-section {
@@ -1122,9 +1129,13 @@ p {
 /* Mobile devices (up to 576px) */
 @media (max-width: 576px) {
   .partneri-grid {
-    grid-template-columns: 1fr;
     gap: 15px;
     padding: 0 5px;
+  }
+  
+  .partneri-item {
+    flex: 0 1 100%;
+    max-width: 100%;
   }
   
   .partneri-section {
@@ -1746,5 +1757,126 @@ p {
   .form-group textarea {
     padding: 8px;
     font-size: 0.85rem;
+  }
+}
+
+/* ======= Instagram Widget Styles ======= */
+.instagram-widget-section {
+  margin: 40px 0 20px 0;
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  background-color: #f8f9fa;
+}
+
+.instagram-widget-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 300;
+}
+
+.instagram-embed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.instagram-embed-container iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 540px;
+  height: 580px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.instagram-more {
+  margin-top: 20px;
+}
+
+.instagram-more-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+}
+
+.instagram-more-btn:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.4);
+  text-decoration: none;
+}
+
+/* Responsive styles for Instagram widget */
+@media (max-width: 768px) {
+  .instagram-widget-section {
+    margin: 30px 0 15px 0;
+    padding: 20px 15px 15px 15px;
+  }
+  
+  .instagram-widget-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .instagram-embed-container {
+    max-width: 100%;
+  }
+  
+  .instagram-embed-container iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 460px;
+    overflow: hidden;
+  }
+  
+  .instagram-more-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-embed-container iframe {
+    max-width: 320px;
+    height: 360px;
+    overflow: hidden;
+  }
+  
+  .instagram-more-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Large screen styles for Instagram widget */
+@media (min-width: 1200px) {
+  .instagram-embed-container {
+    max-width: 700px;
+  }
+  
+  .instagram-embed-container iframe {
+    width: 600px;
+    height: 680px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .instagram-embed-container iframe {
+    width: 540px;
+    height: 580px;
+    overflow: hidden;
   }
 }
