@@ -532,42 +532,40 @@
 
     // Registration form handling
     document.getElementById('registration-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const brandName = document.getElementById('brand-name').value;
-      const brandDescription = document.getElementById('brand-description').value;
-      const brandEmail = document.getElementById('brand-email').value;
-      const companyName = document.getElementById('company-name').value;
-      const ico = document.getElementById('ico').value;
-      const dic = document.getElementById('dic').value;
-      const address = document.getElementById('address').value;
+      // Validation BEFORE allowing form submission
       const spaceType = document.querySelector('input[name="space-type"]:checked');
       const photos = document.getElementById('photos').files;
       
-      // Validation
+      // Only prevent default if validation fails
       if (!spaceType) {
+        e.preventDefault();
         alert('Prosím vyberte typ místa.');
         return;
       }
       
       if (photos.length > 3) {
+        e.preventDefault();
         alert('Můžete nahrát maximálně 3 fotografie.');
         return;
       }
       
-      // Get space info
-      const spaceInfo = spaceType.value === 'small' ? 
-        'Malé místo (1,5m × 1,5m) - 2 500 Kč' : 
-        'Velké místo (2,5m × 1,5m) - 4 000 Kč';
+      // Check file sizes (5MB limit each)
+      for (let i = 0; i < photos.length; i++) {
+        if (photos[i].size > 5 * 1024 * 1024) { // 5MB
+          e.preventDefault();
+          alert(`Soubor ${photos[i].name} je příliš velký. Maximum je 5MB.`);
+          return;
+        }
+      }
       
-      // Here you can add sending data to server
-      alert(`Děkujeme za registraci!\n\nZačka: ${brandName}\nE-mail: ${brandEmail}\nFirma: ${companyName}\nVybrané místo: ${spaceInfo}\nPočet fotografií: ${photos.length}\n\nBrzy se vám ozveme!`);
+      // Show loading state
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Odesílám...';
+      submitBtn.disabled = true;
       
-      // Clear form and close modal
-      this.reset();
-      document.getElementById('photo-preview').innerHTML = '';
-      closeRegistrationModal();
+      // Form will submit naturally to Formspree after this point
+      // Don't prevent default - let the form submit to https://formspree.io/f/xeozpkdj
     });
     
     // Photo preview functionality
