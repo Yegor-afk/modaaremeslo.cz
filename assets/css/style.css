@@ -1762,126 +1762,290 @@ p {
 
 /* ======= Instagram Widget Styles ======= */
 .instagram-widget-section {
-  margin: 40px 0 20px 0 !important;
-  text-align: center !important;
-  padding: 30px 20px 20px 20px !important;
-  background-color: #f8f9fa !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
+  margin: 40px 0 20px 0;
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  background-color: #f8f9fa;
 }
 
 .instagram-widget-section h2 {
-  font-size: 2rem !important;
-  margin-bottom: 30px !important;
-  color: #333 !important;
-  font-weight: 300 !important;
-  text-align: center !important;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 300;
 }
 
 .instagram-embed-container {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  max-width: 600px !important;
-  margin: 0 auto !important;
-  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .instagram-embed-container iframe {
-  border: none !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
-  background-color: white !important;
-  width: 540px !important;
-  height: 580px !important;
-  max-width: 100% !important;
-  overflow: hidden !important;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 540px;
+  height: 580px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .instagram-more {
-  margin-top: 20px !important;
-  text-align: center !important;
+  margin-top: 20px;
 }
 
 .instagram-more-btn {
-  display: inline-block !important;
-  background: linear-gradient(45deg, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80) !important;
-  color: white !important;
-  text-decoration: none !important;
-  padding: 12px 24px !important;
-  border-radius: 25px !important;
-  font-weight: 500 !important;
-  font-size: 0.95rem !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3) !important;
+  display: inline-block;
+  background: linear-gradient(45deg, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
 }
 
 .instagram-more-btn:hover {
-  color: white !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.4) !important;
-  text-decoration: none !important;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.4);
+  text-decoration: none;
 }
 
 /* Responsive styles for Instagram widget */
 @media (max-width: 768px) {
   .instagram-widget-section {
-    margin: 30px 0 15px 0 !important;
-    padding: 20px 15px 15px 15px !important;
+    margin: 30px 0 15px 0;
+    padding: 20px 15px 15px 15px;
   }
   
   .instagram-widget-section h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 20px !important;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
   
   .instagram-embed-container {
-    max-width: 100% !important;
+    max-width: 100%;
   }
   
   .instagram-embed-container iframe {
-    width: 100% !important;
-    max-width: 400px !important;
-    height: 460px !important;
-    overflow: hidden !important;
+    width: 100%;
+    max-width: 400px;
+    height: 460px;
+    overflow: hidden;
   }
   
   .instagram-more-btn {
-    padding: 10px 20px !important;
-    font-size: 0.9rem !important;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .instagram-embed-container iframe {
-    max-width: 320px !important;
-    height: 360px !important;
-    overflow: hidden !important;
+    max-width: 320px;
+    height: 360px;
+    overflow: hidden;
   }
   
   .instagram-more-btn {
-    padding: 8px 16px !important;
-    font-size: 0.85rem !important;
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }
 
 /* Large screen styles for Instagram widget */
 @media (min-width: 1200px) {
   .instagram-embed-container {
-    max-width: 700px !important;
+    max-width: 700px;
   }
   
   .instagram-embed-container iframe {
-    width: 600px !important;
-    height: 680px !important;
-    overflow: hidden !important;
+    width: 600px;
+    height: 680px;
+    overflow: hidden;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1199px) {
   .instagram-embed-container iframe {
-    width: 540px !important;
-    height: 580px !important;
-    overflow: hidden !important;
+    width: 540px;
+    height: 580px;
+    overflow: hidden;
+  }
+}
+
+/* ======= New Form Styles for Registration ======= */
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+}
+
+.form-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Form Row for side-by-side inputs */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Photo Upload Styles */
+.form-group input[type="file"] {
+  padding: 8px;
+  border: 2px dashed #17a2b8;
+  border-radius: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #138496;
+  background: #e9ecef;
+}
+
+.form-help {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.photo-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+}
+
+/* Space Selection Styles */
+.space-options {
+  display: grid;
+  gap: 15px;
+}
+
+.space-option {
+  position: relative;
+}
+
+.space-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.space-label {
+  display: block;
+  padding: 20px;
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.space-label:hover {
+  border-color: #17a2b8;
+  box-shadow: 0 2px 8px rgba(23, 162, 184, 0.1);
+}
+
+.space-option input[type="radio"]:checked + .space-label {
+  border-color: #17a2b8;
+  background: #f0f8ff;
+  box-shadow: 0 4px 15px rgba(23, 162, 184, 0.2);
+}
+
+.space-info {
+  text-align: center;
+}
+
+.space-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.space-size {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.space-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #17a2b8;
+}
+
+/* Responsive adjustments for new form elements */
+@media (max-width: 768px) {
+  .form-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .space-label {
+    padding: 15px;
+  }
+  
+  .space-title {
+    font-size: 1rem;
+  }
+  
+  .space-price {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section {
+    padding: 12px;
+  }
+  
+  .form-section h3 {
+    font-size: 1rem;
+  }
+  
+  .photo-preview {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  
+  .photo-preview img {
+    height: 80px;
   }
 }
