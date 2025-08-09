@@ -56,7 +56,7 @@
               <li><a href="#o-akci">o akci</a></li>
               <li><a href="#design-market">design market</a></li>
               <li><a href="#modni-prehlidka">módní přehlídka</a></li>
-              <li><a href="#registrace-znacky">registrace značky</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdHEKcVAxM_RcXdwptke1Hc5249HVas7WDJxuzhJhP0fleyGw/viewform?usp=header" target="_blank" rel="noopener noreferrer">registrace značky</a></li>
             </ul>
           </nav>
         </div>
@@ -67,102 +67,6 @@
 
   <!-- Background overlay for mobile menu -->
   <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
-
-  <!-- Modal window for brand registration -->
-  <div class="registration-overlay" id="registration-overlay" onclick="closeRegistrationModal()"></div>
-  <div class="registration-modal" id="registration-modal">
-    <div class="registration-content">
-      <button class="close-btn" onclick="closeRegistrationModal()">&times;</button>
-      <h2>Registrace značky</h2>
-      <form class="registration-form" id="registration-form" action="https://formspree.io/f/xeozpkdj" method="POST" enctype="multipart/form-data">
-        <!-- Basic Information -->
-        <div class="form-section">
-          <h3>Základní informace</h3>
-          <div class="form-group">
-            <label for="brand-name">Název značky</label>
-            <input type="text" id="brand-name" name="brand-name" required>
-          </div>
-          <div class="form-group">
-            <label for="brand-description">Popis značky</label>
-            <textarea id="brand-description" name="brand-description" rows="4" required></textarea>
-          </div>
-          <div class="form-group">
-            <label for="brand-email">E-mail pro kontakt</label>
-            <input type="email" id="brand-email" name="brand-email" required>
-          </div>
-        </div>
-
-        <!-- Invoice Information -->
-        <div class="form-section">
-          <h3>Fakturační údaje</h3>
-          <div class="form-group">
-            <label for="company-name">Název firmy</label>
-            <input type="text" id="company-name" name="company-name" required>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="ico">IČO</label>
-              <input type="text" id="ico" name="ico" required>
-            </div>
-            <div class="form-group">
-              <label for="dic">DIČ</label>
-              <input type="text" id="dic" name="dic">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="address">Adresa</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-          </div>
-        </div>
-
-        <!-- Photo Upload -->
-        <div class="form-section">
-          <h3>Fotografie produktů (max. 3)</h3>
-          <div class="form-group">
-            <label for="photos">Vyberte až 3 fotografie</label>
-            <input type="file" id="photos" name="photos" accept="image/*" multiple>
-            <small class="form-help">Podporované formáty: JPG, PNG, WEBP. Max. velikost: 5MB na soubor.</small>
-          </div>
-          <div class="photo-preview" id="photo-preview"></div>
-        </div>
-
-        <!-- Space Selection -->
-        <div class="form-section">
-          <h3>Výběr místa</h3>
-          <div class="space-options">
-            <div class="space-option">
-              <input type="radio" id="small-space" name="space-type" value="Malé místo (1,5m × 1,5m) - 2 500 Kč" required>
-              <label for="small-space" class="space-label">
-                <div class="space-info">
-                  <div class="space-title">Malé místo</div>
-                  <div class="space-size">1,5m × 1,5m</div>
-                  <div class="space-price">2 500 Kč</div>
-                </div>
-              </label>
-            </div>
-            <div class="space-option">
-              <input type="radio" id="large-space" name="space-type" value="Velké místo (2,5m × 1,5m) - 4 000 Kč" required>
-              <label for="large-space" class="space-label">
-                <div class="space-info">
-                  <div class="space-title">Velké místo</div>
-                  <div class="space-size">2,5m × 1,5m</div>
-                  <div class="space-price">4 000 Kč</div>
-                </div>
-              </label>
-            </div>
-          </div>
-          <small class="form-help">* Ceny jsou uvedeny bez DPH</small>
-        </div>
-
-        <!-- Hidden Formspree fields -->
-        <input type="hidden" name="_subject" value="Nová registrace značky - Móda a Řemeslo Sušice">
-        <input type="hidden" name="_next" value="https://yegor-afk.github.io/Modaaremeslo.cz/?success=true">
-        <input type="hidden" name="_captcha" value="false">
-
-        <button type="submit" class="submit-btn">Odeslat registraci</button>
-      </form>
-    </div>
-  </div>
 
   <!-- ======= Hero Image ======= -->
   <section class="hero-section">
@@ -352,7 +256,7 @@
     
     <!-- ======= Hlavní Partneři Section ======= -->
     <div class="partneri-section">
-      <h1 id="registrace-znacky">HLAVNÍ PARTNEŘI</h1>
+      <h1>HLAVNÍ PARTNEŘI</h1>
       
       <div class="partneri-gallery">
         <div class="partneri-grid">
@@ -363,39 +267,14 @@
           </div>
           <div class="partneri-item">
             <a href="http://www.susicebranasumavy.cz" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/sus_logo_www_poz_cb.webp" alt="Agentura Verona" class="partneri-image">
+              <img src="assets/sponzori/sus_logo_www_poz_cb.webp" alt="Sušice" class="partneri-image">
             </a>
           </div>
           <div class="partneri-item">
             <a href="https://www.kulturasusice.cz" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/logo_sirkus_krivky.webp" alt="Agentura Verona" class="partneri-image">
+              <img src="assets/sponzori/logo_sirkus_krivky.webp" alt="Kultura Sušice" class="partneri-image">
             </a>
           </div>
-          <!-- <div class="partneri-item">
-            <a href="https://www.aspontohle.cz/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/Aspon.webp" alt="Aspon" class="partneri-image">
-            </a>
-          </div>
-          <div class="partneri-item">
-            <a href="http://www.beatutytape.cz/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/Beautytape.webp" alt="Beauty Tape" class="partneri-image">
-            </a>
-          </div>
-          <div class="partneri-item">
-            <a href="https://www.biorganica.cz/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/Biorganica.webp" alt="Biorganica" class="partneri-image">
-            </a>
-          </div>
-          <div class="partneri-item">
-            <a href="https://hospic-pisek.cz/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/Hospic.webp" alt="Hospic Písek" class="partneri-image">
-            </a>
-          </div>
-          <div class="partneri-item">
-            <a href="https://www.ab-decor.cz/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/sponzori/ab.webp" alt="AB Decor" class="partneri-image">
-            </a>
-          </div> -->
         </div>
       </div>
     </div>
@@ -500,105 +379,13 @@
     
     // Close menu on link click
     document.querySelectorAll('.nav-menu a').forEach(link => {
-      if (link.getAttribute('href') === '#registrace-znacky') {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          closeMenu();
-          openRegistrationModal();
-        });
-      } else {
-        link.addEventListener('click', closeMenu);
-      }
+      link.addEventListener('click', closeMenu);
     });
 
-    // Functions for registration modal
-    function openRegistrationModal() {
-      const registrationOverlay = document.getElementById('registration-overlay');
-      const registrationModal = document.getElementById('registration-modal');
-      
-      registrationOverlay.classList.add('active');
-      registrationModal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Block page scrolling
-    }
-
-    function closeRegistrationModal() {
-      const registrationOverlay = document.getElementById('registration-overlay');
-      const registrationModal = document.getElementById('registration-modal');
-      
-      registrationOverlay.classList.remove('active');
-      registrationModal.classList.remove('active');
-      document.body.style.overflow = 'auto'; // Unblock page scrolling
-    }
-
-    // Registration form handling
-    document.getElementById('registration-form').addEventListener('submit', function(e) {
-      // Validation BEFORE allowing form submission
-      const spaceType = document.querySelector('input[name="space-type"]:checked');
-      const photos = document.getElementById('photos').files;
-      
-      // Only prevent default if validation fails
-      if (!spaceType) {
-        e.preventDefault();
-        alert('Prosím vyberte typ místa.');
-        return;
-      }
-      
-      if (photos.length > 3) {
-        e.preventDefault();
-        alert('Můžete nahrát maximálně 3 fotografie.');
-        return;
-      }
-      
-      // Check file sizes (5MB limit each)
-      for (let i = 0; i < photos.length; i++) {
-        if (photos[i].size > 5 * 1024 * 1024) { // 5MB
-          e.preventDefault();
-          alert(`Soubor ${photos[i].name} je příliš velký. Maximum je 5MB.`);
-          return;
-        }
-      }
-      
-      // Show loading state
-      const submitBtn = this.querySelector('.submit-btn');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Odesílám...';
-      submitBtn.disabled = true;
-      
-      // Form will submit naturally to Formspree after this point
-      // Don't prevent default - let the form submit to https://formspree.io/f/xeozpkdj
-    });
-    
-    // Photo preview functionality
-    document.getElementById('photos').addEventListener('change', function(e) {
-      const files = e.target.files;
-      const preview = document.getElementById('photo-preview');
-      preview.innerHTML = '';
-      
-      if (files.length > 3) {
-        alert('Můžete nahrát maximálně 3 fotografie. Vyberte prosím pouze 3 soubory.');
-        e.target.value = '';
-        return;
-      }
-      
-      Array.from(files).forEach(file => {
-        if (file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            const img = document.createElement('img');
-            img.src = e.target.result;
-            img.alt = file.name;
-            preview.appendChild(img);
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-    });
-    
     // Close menu on ESC key press
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeMenu();
-        closeRegistrationModal();
       }
     });
     
